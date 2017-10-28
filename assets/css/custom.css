@@ -22,17 +22,17 @@ body {
 }
 
 h1 {
-    font-size: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .modifier-title {
     display: inline;
-}
+    width: 33% !important;
+    float:left;
 
-.modifier-dropdown {
-    display: inline;
 }
-
 
 .textbox p {
     display: block;
@@ -42,6 +42,23 @@ h1 {
     padding: 5px;
 }
 
+.dropdown button, .dropdown-menu {
+    width: 66%;
+}
+
+.map-nav, .no-pad .col-sm-3 {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.dropdown button, .dropdown-menu {
+    border-radius: 0px !important;
+    border: 1px solid #7e7e7e;
+}
+
+.dropdown button:hover {
+    cursor: pointer;
+}
 
 
 
