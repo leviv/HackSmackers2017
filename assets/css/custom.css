@@ -1,7 +1,7 @@
 /* ===============================
     Custom CSS
     By: Levi Villarreal, Sam Trevino and Dylan Vargas
-    For TSA Webmaster compitition
+    For 2017 Hacksmackers
     Completed 2/25/15
 =============================== */
 
@@ -15,6 +15,20 @@ body {
     text-rendering: optimizelegibility;
 }
 
+body {
+    margin: 10px;
+    white-space: nowrap;
+}
+
+h1 {
+    font-size: 15px;
+}
+
+#container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
