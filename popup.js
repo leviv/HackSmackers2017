@@ -157,25 +157,38 @@ var fontColor = "";
 var fontBg = "";
 
 $("#font").change(function() {
-    //alert($(this).val());
     $('.textbox').css("font-family", $(this).val());
     font = $(this).val();
 });
 
 $("#font-color").change(function() {
-    //alert("#" + $("#btnPicker").val());
     $('.textbox').css("color", ("#" + $("#font-color").val()));
     fontColor = ("#" + $("#font-color").val());
 });
 
 $("#font-bg").change(function() {
-    //alert("#" + $("#btnPicker").val());
     $('.textbox').css("background-color", ("#" + $("#font-bg").val()));
     fontBg = ("#" + $("#font-bg").val());
 });
 
-$("#make-changes").click(function() {
-    changeFontColor(fontColor);
-    changeFont(font);
-    changeFontBgColor(fontBg);
-});
+function hello() {
+    chrome.tabs.executeScript({
+        code: 'var bgColor = ' + JSON.stringify(fontBg)
+    }); 
+    
+    chrome.tabs.executeScript({
+        code: 'var fontFamily = ' + JSON.stringify(font)
+    }); 
+    
+    chrome.tabs.executeScript({
+        code: 'var color = ' + JSON.stringify(fontColor)
+    }); 
+    
+    
+    chrome.tabs.executeScript({
+        file: 'hello.js'
+    }); 
+    
+}
+
+document.getElementById('make-changes').addEventListener('click', hello);

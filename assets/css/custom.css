@@ -53,6 +53,10 @@ h1 {
     padding: 5px;
 }
 
+textarea {
+    border: 1px dashed #000;
+}
+
 .preview h3 {
     clear: both;
     text-align: center;
@@ -69,7 +73,26 @@ input.jscolor {
     display: inline-block;
 }
 
+button#make-changes {
+    width: 100%;
+}
 
+button#make-changes a {
+    color: black !important;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+button#make-changes:hover a {
+    color: #fff !important;
+}
+
+button#make-changes:hover {
+    background: #484848;
+    border: 0px solid #eee;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
 
 
 
