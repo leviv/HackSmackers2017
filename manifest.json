@@ -11,12 +11,19 @@
     },
     
     "permissions": [
+        "storage",
         "tabs", "<all_urls>"
     ],
     
     "background": {
         "scripts": ["hello.js"],
         "persistent": false
-    }
-
+    }, 
+    
+    "content_scripts": [ 
+        
+    {
+        "matches": ["<all_urls>"],
+        "js": ["hello.js"]
+    } ]
 }
