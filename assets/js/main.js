@@ -1,23 +1,15 @@
-/* ===============================
-    Tabbable Content
-    http://callmenick.com/2015/01/25/animating-css-only-hamburger-menu-icons/
-=============================== */
-(function () {
+$("#font").change(function() {
+    //alert($(this).val());
+    $('.textbox').css("font-family", $(this).val());
 
-    "use strict";
+});
 
-    var toggles = document.querySelectorAll(".cmn-toggle-switch");
+$("#font-color").change(function() {
+    //alert("#" + $("#btnPicker").val());
+    $('.textbox').css("color", ("#" + $("#font-color").val()));
+});
 
-    for (var i = toggles.length - 1; i >= 0; i--) {
-        var toggle = toggles[i];
-        toggleHandler(toggle);
-    };
-
-    function toggleHandler(toggle) {
-        toggle.addEventListener( "click", function(e) {
-            e.preventDefault();
-            (this.classList.contains("active") === true) ? this.classList.remove("active") : this.classList.add("active");
-        });
-    }
-
-})();
+$("#font-bg").change(function() {
+    //alert("#" + $("#btnPicker").val());
+    $('.textbox').css("background-color", ("#" + $("#font-bg").val()));
+});
